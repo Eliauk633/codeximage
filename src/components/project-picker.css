@@ -1,0 +1,27 @@
+.project-picker-popover { position: fixed; z-index: 100; width: 262px; max-width: calc(100vw - 16px); padding: 0 4px 4px; border: .5px solid var(--border); border-radius: 16px; background: var(--surface); box-shadow: 0 8px 24px #0000000e, 0 2px 5px #00000005; font-size: 13px; }
+.project-picker-search { display: flex; align-items: center; gap: 6px; height: 38px; margin: 0 8px; border-bottom: .5px solid var(--border); color: var(--subtle); }
+.project-picker-search input { min-width: 0; width: 100%; height: 30px; padding: 0; border: 0; outline: none; background: none; font-size: 13px; color: var(--text); }
+.project-picker-search input::placeholder { color: var(--subtle); }
+.project-picker-search input:focus-visible { outline: none; }
+.project-picker-search input::-webkit-search-cancel-button { display: none; }
+.project-picker-list { max-height: 150px; overflow-y: auto; padding: 4px 0; scrollbar-gutter: stable; }
+.project-picker-list.more-below { mask-image: linear-gradient(to bottom, #000 calc(100% - 24px), transparent); }
+.project-picker-list.more-above { mask-image: linear-gradient(to bottom, transparent, #000 24px); }
+.project-picker-list.more-above.more-below { mask-image: linear-gradient(to bottom, transparent, #000 24px, #000 calc(100% - 24px), transparent); }
+.project-picker-list::-webkit-scrollbar-thumb { background: color-mix(in srgb, var(--text) 8%, transparent); }
+.project-picker-row { display: flex; align-items: center; gap: 6px; width: 100%; height: 28.6px; padding: 0 8px; border-radius: 7px; text-align: left; font-size: 13px; white-space: nowrap; }
+.project-picker-row:hover, .project-picker-row:focus-visible { background: var(--hover); outline: none; }
+.project-picker-row > svg { flex-shrink: 0; color: var(--muted); stroke-width: 1.25; }
+.project-picker-name { overflow: hidden; text-overflow: ellipsis; flex: 0 1 auto; }
+.project-picker-directory { min-width: 0; overflow: hidden; text-overflow: ellipsis; color: var(--subtle); margin-left: -2px; }
+.project-picker-row .project-picker-check { margin-left: auto; color: var(--muted); }
+.project-picker-actions { position: relative; padding-top: 5px; margin-top: 1px; color: color-mix(in srgb, var(--text) 75%, transparent); }
+.project-picker-actions::before { content: ''; position: absolute; top: 0; left: 8px; right: 8px; height: .5px; background: var(--border); }
+.project-picker-actions svg { color: var(--subtle); }
+.project-picker-empty { padding: 15px 6px; color: var(--muted); }
+.composer-project-bar { display: flex; align-items: flex-start; gap: 8px; height: 46px; padding: 3px 4px 14px; margin: 0 18px -10px; border-radius: 16px 16px 0 0; background: color-mix(in srgb, var(--text) 4%, var(--bg)); }
+.composer-project-bar .dropdown-trigger { height: 28px; padding: 0 8px; border-radius: 16px; gap: 6px; font-size: 13px; }
+.composer-project-bar .dropdown-trigger.active { background: color-mix(in srgb, var(--text) 6%, transparent); }
+.composer-project-bar .project-picker .dropdown-trigger > span { max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.composer-project-bar .dropdown-trigger svg { color: var(--text); stroke-width: 1.3; }
+:root[data-theme='dark'] .project-picker-popover { box-shadow: var(--shadow); }

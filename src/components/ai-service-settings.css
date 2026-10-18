@@ -1,0 +1,4 @@
+.ai-service-settings { margin-bottom: 32px; }
+.ai-service-settings .settings-preference-control { flex-wrap: wrap; }
+.ai-service-settings .ai-service-url { min-width: 0; overflow-wrap: anywhere; text-align: right; }
+.ai-service-settings .ai-service-error { padding-bottom: 16px; font-size: 12px; line-height: 1.6; color: #cf3333; }

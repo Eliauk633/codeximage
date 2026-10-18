@@ -1,0 +1,107 @@
+.automations-page { position: relative; display: flex; width: 100%; height: 100%; min-height: 0; overflow: hidden; border-radius: 13px 13px 0 0; background: var(--surface); }
+.automations-sidebar { flex: 0 0 288px; width: 288px; padding: 0 8px 14px; display: flex; flex-direction: column; gap: 1px; background: var(--sidebar); border-right: 1px solid var(--border); overflow: auto; }
+.automations-sidebar-heading { height: 52px; min-height: 52px; padding: 0 9px; display: flex; justify-content: space-between; align-items: center; }
+.automations-sidebar-heading strong { font-size: 18px; font-weight: 600; }
+.automations-sidebar-heading .icon-button { color: var(--muted); }
+.automations-nav-row { display: flex; align-items: center; gap: 9px; min-height: 32px; width: 100%; padding: 0 10px; border-radius: 10px; text-align: left; font-size: 14px; }
+.automations-nav-row > span:not(.automations-count) { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.automations-nav-row:hover,.automations-nav-row.selected { background: var(--hover); }
+.automations-nav-row svg { flex-shrink: 0; }
+.automations-count { margin-left: auto; color: var(--muted); font-size: 12px; }
+.automations-sidebar-label { color: var(--muted); font-size: 13px; margin: 23px 9px 9px; }
+.automations-sidebar-footer { display: flex; align-items: center; gap: 8px; margin-top: auto; padding: 32px 10px 4px; color: var(--muted); font-size: 12px; }
+.automations-main { flex: 1; min-width: 0; overflow: auto; }
+.automations-content { max-width: 1440px; padding: 34px 64px 64px; margin: 0 auto; }
+.automations-heading { display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; }
+.automations-heading h1 { font-size: 25px; font-weight: 600; line-height: 34px; letter-spacing: -.5px; }
+.automations-heading p { margin-top: 9px; color: var(--muted); font-size: 13px; line-height: 20px; }
+.automations-primary,.automations-soft,.automations-danger { display: inline-flex; align-items: center; justify-content: center; gap: 7px; min-height: 30px; padding: 6px 13px; border-radius: 18px; font-size: 13px; line-height: 18px; white-space: nowrap; }
+.automations-primary { background: var(--text); color: var(--surface); }
+.automations-primary:hover { opacity: .85; }
+.automations-soft { background: var(--hover); }
+.automations-soft:hover { background: var(--selected); }
+.automations-danger { background: var(--danger); color: #fff; }
+.automations-toolbar { margin-top: 34px; margin-bottom: 20px; display: flex; gap: 16px; justify-content: space-between; align-items: center; }
+.automations-search { display: flex; align-items: center; gap: 8px; width: 260px; height: 33px; padding: 0 11px; border: 1px solid var(--border); border-radius: 18px; color: var(--muted); }
+.automations-search input { width: 100%; min-width: 0; background: none; border: 0; outline: none; font-size: 13px; color: var(--text); }
+.automations-search button { display: flex; padding: 0; color: var(--muted); }
+.automations-filters { display: flex; gap: 8px; }
+.automations-filters select { min-height: 30px; padding: 4px 10px; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; font-size: 13px; max-width: 130px; }
+.automations-table-header,.automations-task-row { display: grid; grid-template-columns: minmax(180px, 1.5fr) minmax(155px, 1fr) minmax(132px, 1fr) 60px; gap: 16px; align-items: center; padding: 0 12px; }
+.automations-table-header { height: 36px; font-size: 12px; color: var(--muted); border-bottom: 1px solid var(--border); }
+.automations-task-row { min-height: 69px; border-bottom: 1px solid var(--border); font-size: 13px; }
+.automations-task-row:hover,.automations-task-row.selected { background: color-mix(in srgb, var(--hover) 50%, transparent); }
+.automations-task-name { min-width: 0; display: flex; align-items: center; gap: 12px; padding: 10px 0; text-align: left; }
+.automations-task-name > span:last-child { min-width: 0; }
+.automations-task-name strong { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 14px; font-weight: 400; }
+.automations-task-name small { display: block; color: var(--muted); font-size: 11px; margin-top: 4px; }
+.automations-task-icon { width: 34px; height: 34px; border: 1px solid var(--border); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--muted); background: var(--surface); }
+.automations-task-cadence,.automations-task-next { color: var(--muted); font-size: 12px; line-height: 18px; }
+.automations-row-actions { display: flex; justify-content: flex-end; }
+.automations-row-actions .icon-button { width: 28px; height: 28px; color: var(--muted); }
+.automations-empty { padding: 64px 16px 74px; text-align: center; }
+.automations-empty-clock { display: inline-flex; align-items: center; justify-content: center; width: 56px; height: 56px; border-radius: 16px; background: var(--hover); color: var(--muted); }
+.automations-empty h2 { font-size: 17px; font-weight: 500; margin: 17px 0 9px; }
+.automations-empty p { font-size: 13px; color: var(--muted); line-height: 20px; }
+.automations-empty .automations-soft { margin-top: 16px; }
+.automations-recommendations { margin-top: 36px; }
+.automations-recommendations h2 { font-size: 14px; font-weight: 500; margin-bottom: 16px; }
+.automations-template-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 14px; }
+.automations-template { padding: 20px; text-align: left; display: flex; flex-direction: column; gap: 10px; min-height: 174px; border: 1px solid var(--border); border-radius: 16px; }
+.automations-template:hover { background: var(--hover); }
+.automations-template > svg { margin-bottom: 4px; color: var(--muted); }
+.automations-template strong { font-size: 14px; font-weight: 500; }
+.automations-template > span { font-size: 12px; line-height: 18px; color: var(--muted); }
+.automations-template-time { display: flex; justify-content: space-between; width: 100%; margin-top: auto; padding-top: 10px; }
+.automations-notice { display: flex; align-items: center; gap: 7px; color: var(--muted); margin-bottom: 12px; font-size: 12px; }
+.automations-error { color: var(--danger); font-size: 13px; line-height: 20px; margin: 10px 0; }
+.automations-detail { width: 370px; flex: 0 0 370px; border-left: 1px solid var(--border); background: var(--surface); display: flex; flex-direction: column; }
+.automations-detail > header { height: 50px; min-height: 50px; border-bottom: 1px solid var(--border); padding: 0 18px; display: flex; align-items: center; justify-content: space-between; font-size: 13px; color: var(--muted); }
+.automations-detail-body { overflow: auto; padding: 24px; }
+.automations-detail-badge { display: inline-flex; gap: 5px; align-items: center; color: var(--muted); font-size: 12px; }
+.automations-detail h2 { font-size: 22px; font-weight: 600; margin: 15px 0 9px; overflow-wrap: anywhere; }
+.automations-detail-cadence { color: var(--muted); font-size: 13px; line-height: 20px; }
+.automations-detail-actions { display: flex; gap: 8px; margin: 22px 0; }
+.automations-detail-actions > .icon-button { margin-left: auto; color: var(--muted); }
+.automations-detail-tabs { display: flex; gap: 18px; border-bottom: 1px solid var(--border); margin-bottom: 24px; }
+.automations-detail-tabs button { padding: 10px 0; font-size: 13px; color: var(--muted); border-bottom: 2px solid transparent; }
+.automations-detail-tabs button[aria-selected=true] { border-color: var(--text); color: var(--text); }
+.automations-detail h3 { font-size: 13px; font-weight: 500; margin-bottom: 12px; }
+.automations-instructions { font-size: 13px; line-height: 23px; white-space: pre-wrap; overflow-wrap: anywhere; }
+.automations-detail-meta { margin: 30px 0 24px; font-size: 12px; }
+.automations-detail-meta > div { display: flex; justify-content: space-between; gap: 12px; padding: 9px 0; }
+.automations-detail-meta dt { color: var(--muted); }
+.automations-detail-meta dd { margin: 0; text-align: right; }
+.automations-service { padding: 14px; border: 1px solid var(--border); border-radius: 13px; font-size: 12px; }
+.automations-service p { margin: 7px 0 13px; font-size: 12px; line-height: 19px; color: var(--muted); }
+.automations-history-empty { text-align: center; padding: 40px 0; color: var(--muted); }
+.automations-history-empty h3 { margin: 15px 0 8px; color: var(--text); }
+.automations-history-empty p { font-size: 13px; }
+.automations-editor { width: min(560px,calc(100vw - 40px)); max-height: min(820px,90vh); overflow: hidden; }
+.automations-editor form { display: flex; flex-direction: column; max-height: calc(min(820px,90vh) - 58px); }
+.automations-editor-body { overflow: auto; padding: 20px 24px; }
+.automations-editor label { display: flex; flex-direction: column; gap: 8px; margin-bottom: 20px; font-size: 13px; }
+.automations-editor input:not([type=checkbox]),.automations-editor textarea,.automations-editor select { width: 100%; border: 1px solid var(--border); border-radius: 10px; background: var(--surface); padding: 9px 11px; min-height: 37px; font-size: 13px; }
+.automations-editor textarea { line-height: 21px; resize: vertical; min-height: 108px; max-height: 280px; }
+.automations-editor fieldset { border: 1px solid var(--border); border-radius: 14px; padding: 16px; margin: 4px 0 20px; }
+.automations-editor legend { padding: 0 7px; font-size: 13px; }
+.automations-schedule-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.automations-schedule-fields label { margin-bottom: 12px; }
+.automations-weekdays { margin-top: 6px; font-size: 13px; }
+.automations-weekdays > div { display: flex; gap: 8px; margin: 10px 0 15px; }
+.automations-weekdays button { width: 32px; height: 32px; border-radius: 50%; background: var(--hover); font-size: 12px; }
+.automations-weekdays button[aria-pressed=true] { background: var(--text); color: var(--surface); }
+.automations-time-zone,.automations-editor-note { font-size: 12px; line-height: 18px; color: var(--muted); }
+.automations-editor .automations-pause-label { flex-direction: row; align-items: center; justify-content: space-between; }
+.automations-pause-label strong { display: block; font-size: 13px; font-weight: 400; }
+.automations-pause-label small { display: block; color: var(--muted); margin-top: 5px; font-size: 12px; }
+.automations-pause-label input { width: 16px; height: 16px; accent-color: var(--text); }
+.automations-editor footer,.automations-delete footer { display: flex; justify-content: flex-end; gap: 8px; padding: 16px 24px; border-top: 1px solid var(--border); }
+.automations-delete { width: min(430px,90vw); }
+.automations-delete > p { padding: 20px 24px; font-size: 14px; line-height: 23px; overflow-wrap: anywhere; }
+.automations-delete > .automations-error { padding-top: 0; }
+@media (max-width: 1500px) { .automations-content { padding-left: 44px; padding-right: 44px; } .automations-page.has-detail .automations-detail { position: absolute; top: 0; bottom: 0; right: 0; z-index: 5; box-shadow: -8px 0 24px #00000006; } }
+@media (max-width: 1150px) { .automations-content { padding: 30px 28px; } .automations-table-header,.automations-task-row { grid-template-columns: minmax(150px,1fr) minmax(130px,1fr) 58px; gap: 12px; } .automations-table-header > span:nth-child(3),.automations-task-next { display: none; } .automations-template-grid { grid-template-columns: 1fr; } .automations-template { min-height: auto; display: grid; grid-template-columns: 24px 1fr; gap: 8px 14px; padding: 16px; } .automations-template > svg { grid-row: span 3; } .automations-template > span { grid-column: 2; } .automations-template-time { padding-top: 2px; } }
+@media (max-width: 800px) { .automations-sidebar { flex-basis: 225px; width: 225px; } .automations-content { padding: 26px 20px; } .automations-heading { flex-direction: column; gap: 14px; } .automations-toolbar { flex-wrap: wrap; margin-top: 24px; } .automations-search { width: 100%; } .automations-table-header,.automations-task-row { grid-template-columns: minmax(130px,1fr) 58px; } .automations-table-header > span:nth-child(2),.automations-task-cadence { display: none; } .automations-detail { max-width: calc(100% - 20px); } }
+
+.automations-editor fieldset.automations-editor-fields { border: 0; border-radius: 0; padding: 20px 24px; margin: 0; min-width: 0; }

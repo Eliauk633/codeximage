@@ -1,0 +1,52 @@
+.project-actions { display: inline-flex; flex: 0 0 23px; }
+.project-actions-trigger { width: 23px; height: 23px; padding: 0; display: flex; align-items: center; justify-content: center; border-radius: 6px; background: transparent; color: var(--muted); }
+.project-actions-trigger:hover, .project-actions-trigger.active { background: var(--hover); color: var(--text); }
+.project-actions-menu { position: fixed; z-index: 1500; width: 160px; max-width: calc(100vw - 16px); max-height: calc(100vh - 16px); overflow-y: auto; overscroll-behavior: contain; padding: 6px; border: 1px solid color-mix(in srgb, var(--text) 10%, transparent); border-radius: 17px; background: var(--surface); box-shadow: 0 7px 24px #00000014, 0 2px 6px #00000008; color: var(--text); -webkit-app-region: no-drag; }
+.project-actions-menu > button { display: flex; align-items: center; gap: 8px; width: 100%; height: 29px; min-height: 29px; padding: 0 8px; border-radius: 8px; font-size: 14px; font-weight: 400; line-height: 20px; text-align: left; outline-offset: -2px; }
+.project-actions-menu > button:hover, .project-actions-menu > button:focus-visible, .project-actions-menu > button.submenu-open { background: var(--hover); }
+.project-actions-menu > button > svg { flex: 0 0 auto; }
+.project-actions-menu .lucide-pin { transform: rotate(40deg); }
+.project-actions-menu > button > span { flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.project-actions-trailing { margin-left: auto; color: var(--muted); }
+.project-actions-divider { height: 1px; background: var(--border); margin: 3px 2px; }
+.project-actions-submenu { width: 180px; border-radius: 13px; }
+.project-actions-menu > button:disabled { background: transparent; }
+.project-appearance-emoji { display: inline-flex; align-items: center; justify-content: center; flex: 0 0 auto; font-family: 'Apple Color Emoji', 'Segoe UI Emoji', sans-serif; line-height: 1; }
+.project-edit-dialog { width: min(520px, calc(100vw - 40px)); }
+.project-edit-content { padding: 20px; max-height: calc(82vh - 125px); overflow: auto; }
+.project-edit-label { display: block; font-size: 13px; font-weight: 500; margin-bottom: 9px; }
+.project-edit-name-row { display: flex; align-items: center; gap: 10px; }
+.project-edit-name-row > input { flex: 1; min-width: 0; height: 39px; padding: 0 11px; border: 1px solid var(--border); border-radius: 9px; background: var(--surface); outline: none; font-size: 14px; }
+.project-edit-name-row > input:focus { border-color: #82aaf0; box-shadow: 0 0 0 2px #3b82f611; }
+.project-edit-appearance { position: relative; flex: 0 0 39px; }
+.project-edit-appearance-trigger { width: 39px; height: 39px; display: flex; align-items: center; justify-content: center; border: 1px solid var(--border); border-radius: 9px; }
+.project-edit-appearance-trigger:hover { background: var(--hover); }
+.project-appearance-panel { position: fixed; z-index: 5; width: 246px; max-width: calc(100vw - 16px); max-height: calc(100vh - 16px); overflow: auto; padding: 13px; border: 1px solid var(--border); border-radius: 14px; background: var(--surface); box-shadow: var(--shadow); }
+.project-appearance-label { display: block; color: var(--muted); font-size: 12px; margin-bottom: 8px; }
+.project-appearance-icon-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; margin-bottom: 14px; }
+.project-appearance-icon-grid button { height: 32px; border-radius: 7px; display: flex; align-items: center; justify-content: center; color: var(--muted); }
+.project-appearance-icon-grid button:hover, .project-appearance-icon-grid button[aria-pressed=true] { background: var(--hover); color: var(--text); }
+.project-appearance-colors { display: flex; justify-content: space-between; gap: 5px; margin-bottom: 14px; }
+.project-appearance-colors button { display: flex; justify-content: center; align-items: center; color: white; width: 22px; height: 22px; padding: 0; border-radius: 50%; }
+.project-appearance-colors button:focus-visible { outline-offset: 2px; }
+.project-appearance-emoji-field { display: flex; gap: 10px; align-items: center; font-size: 12px; color: var(--muted); }
+.project-appearance-emoji-field input { width: 100%; min-width: 0; height: 31px; border: 1px solid var(--border); border-radius: 7px; background: var(--surface); padding: 0 8px; font-size: 13px; }
+.project-appearance-reset { display: flex; align-items: center; gap: 7px; margin-top: 12px; padding: 9px 0 0; border-top: 1px solid var(--border); width: 100%; color: var(--muted); font-size: 12px; }
+.project-edit-sources-heading { display: flex; align-items: center; justify-content: space-between; margin: 25px 0 11px; gap: 12px; }
+.project-edit-sources-heading h3 { margin: 0; font-size: 13px; font-weight: 500; }
+.project-edit-sources-heading > button { display: flex; gap: 4px; align-items: center; color: var(--muted); font-size: 12px; padding: 3px 0; }
+.project-edit-sources { border: 1px solid var(--border); border-radius: 11px; }
+.project-edit-source { display: flex; gap: 10px; align-items: center; min-height: 65px; padding: 11px; }
+.project-edit-source + .project-edit-source { border-top: 1px solid var(--border); }
+.project-edit-source > svg { color: var(--muted); flex-shrink: 0; }
+.project-edit-source-text { flex: 1; min-width: 0; }
+.project-edit-source-text > div { display: flex; align-items: center; gap: 7px; font-size: 13px; }
+.project-edit-source-text > div > span { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.project-edit-source-text small { flex: 0 0 auto; font-size: 10px; padding: 1px 5px; background: var(--hover); border-radius: 5px; color: var(--muted); }
+.project-edit-source-text p { font-size: 11px; color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; margin: 4px 0 0; }
+.project-edit-source-actions { display: flex; align-items: center; gap: 5px; flex-shrink: 0; }
+.project-edit-source-actions button { min-height: 25px; font-size: 11px; color: var(--muted); border-radius: 6px; padding: 3px; display: flex; align-items: center; justify-content: center; }
+.project-edit-source-actions button:hover:not(:disabled) { background: var(--hover); color: var(--text); }
+.project-edit-error { color: var(--danger); font-size: 12px; margin: 14px 0 0; line-height: 19px; }
+.project-edit-footer { padding-top: 16px; border-top: 1px solid var(--border); }
+.project-edit-remove { margin-right: auto; padding: 0; color: var(--danger); font-size: 12px; }

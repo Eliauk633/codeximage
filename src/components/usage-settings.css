@@ -1,0 +1,69 @@
+.settings-page-content:has(.usage-settings) .settings-page-heading { margin-bottom: 34px; }
+.settings-tab-list { display: flex; align-items: center; gap: 3px; }
+.settings-tab-list > button { padding: 5px 9px; height: 28px; border-radius: 10px; font-size: 13px; color: var(--muted); }
+.settings-tab-list > button[aria-selected=true], .settings-tab-list > button:hover { background: var(--hover); color: var(--text); }
+.usage-toolbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 28px; }
+.usage-section + .usage-section { margin-top: 40px; }
+.usage-section > h3 { font-size: 16px; font-weight: 500; line-height: 24px; }
+.usage-section > p { margin-top: 4px; color: var(--muted); font-size: 13px; line-height: 18px; }
+.usage-card { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 74px; padding: 12px 16px; margin-top: 12px; border: 1px solid var(--border); border-radius: 16px; font-size: 13px; line-height: 18px; }
+.usage-card p { margin-top: 0; color: var(--muted); font-size: 13px; line-height: 18px; }
+.usage-plan { min-height: 62px; }
+.usage-card-actions { display: flex; align-items: center; justify-content: flex-end; gap: 8px; flex-wrap: wrap; }
+.usage-discount { display: inline-flex; align-items: center; height: 24px; padding: 0 10px; border-radius: 12px; background: #924ff718; color: #924ff7; white-space: nowrap; }
+.usage-quota { display: block; }
+.usage-quota-labels { display: flex; justify-content: space-between; margin: 2px 0 4px; font-size: 12px; line-height: 16px; color: var(--muted); }
+.usage-quota progress { display: block; width: 100%; height: 6px; border: 0; border-radius: 4px; overflow: hidden; }
+.usage-quota progress::-webkit-progress-bar { background: var(--hover); }
+.usage-quota progress::-webkit-progress-value { background: var(--text); }
+.usage-reset-allow .settings-preference-row { min-height: 76px; }
+.usage-reset-allow .settings-preference-copy { max-width: 510px; }
+.usage-dialog-label { display: block; margin: 20px 0 10px; font-size: 13px; }
+@media (max-width: 1000px) { .usage-card { flex-wrap: wrap; } .usage-card-actions { justify-content: flex-start; } }
+.usage-settings:focus { outline: none; }
+.usage-save-error { color: #c53a2a; font-size: 13px; margin-top: 16px; }
+.usage-save-error:empty { display: none; }
+.usage-payment-status { color: var(--muted); font-size: 13px; margin-top: 18px; }
+.dialog.usage-editor-dialog { width: min(580px, calc(100vw - 48px)); max-height: calc(100vh - 64px); overflow: hidden; }
+.usage-editor-dialog > form { display: flex; flex-direction: column; max-height: calc(100vh - 124px); }
+.usage-editor-fields { padding: 20px 24px; min-height: 0; overflow-y: auto; font-size: 13px; }
+.usage-editor-fields p { color: var(--muted); font-size: 12px; line-height: 19px; margin: 0 0 20px; }
+.usage-editor-fields fieldset { padding: 0; margin: 0 0 22px; border: 0; min-width: 0; }
+.usage-editor-fields fieldset:last-child { margin-bottom: 0; }
+.usage-editor-fields fieldset > p { margin: 12px 0 0; }
+.usage-editor-fields legend { font-size: 13px; font-weight: 600; margin-bottom: 14px; }
+.usage-editor-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.usage-editor-grid label { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.usage-editor-grid input, .usage-editor-grid select { min-width: 0; width: 100%; padding: 9px 10px; font: inherit; color: var(--text); background: var(--bg); border: 1px solid var(--border); border-radius: 8px; }
+.usage-editor-footer { flex: 0 0 auto; border-top: 1px solid var(--border); padding: 12px 20px 16px; }
+.usage-editor-footer > div { display: flex; align-items: center; gap: 8px; justify-content: flex-end; }
+.usage-editor-footer kbd { margin-right: auto; color: var(--subtle); }
+.usage-editor-footer > p { color: #c53a2a; font-size: 12px; line-height: 19px; margin-bottom: 10px; }
+.usage-editor-footer > p:empty { display: none; }
+@media (max-width: 600px) { .usage-editor-grid { grid-template-columns: 1fr; } }
+
+.usage-reset-card { margin-top: 12px; padding: 12px 16px 0; border: 1px solid var(--border); border-radius: 16px; font-size: 13px; line-height: 18px; }
+.usage-reset-card:focus { outline: none; }
+.usage-reset-card-tabs { padding-bottom: 10px; }
+.usage-reset-card-tabs > button { padding-inline: 8px; }
+.usage-reset-card-tabs > button > span { color: var(--muted); margin-left: 3px; }
+.usage-reset-row { display: flex; min-height: 60px; align-items: center; justify-content: space-between; gap: 16px; border-top: 1px solid var(--border); padding: 12px 0; }
+.usage-reset-row > div { min-width: 0; }
+.usage-reset-row p { color: var(--muted); margin: 0; font-size: 12px; line-height: 18px; }
+.usage-reset-row > button { flex-shrink: 0; }
+.usage-reset-used { color: var(--muted); }
+.usage-reset-empty { color: var(--muted); text-align: center; border-top: 1px solid var(--border); padding: 26px 0; }
+.usage-reset-empty p { margin-top: 6px; font-size: 12px; }
+.usage-reset-pagination { display: flex; justify-content: flex-end; align-items: center; gap: 16px; padding: 12px 0; color: var(--muted); border-top: 1px solid var(--border); font-size: 12px; }
+.usage-reset-pagination button { padding: 4px 8px; background: var(--hover); border-radius: 8px; }
+.usage-reset-confirm-expiry { color: var(--muted); font-size: 12px; margin-top: 12px; }
+.usage-card-expiry-editor { margin-top: 16px; border: 1px solid var(--border); border-radius: 10px; }
+.usage-card-expiry-editor summary { cursor: pointer; padding: 12px; }
+.usage-card-expiry-editor summary > span { float: right; color: var(--muted); }
+.usage-card-expiry-editor > p { padding: 12px; margin: 0; }
+.usage-card-expiry-list { padding: 0 12px; }
+.usage-card-expiry-row { display: flex; align-items: flex-end; gap: 12px; border-top: 1px solid var(--border); padding: 12px 0; }
+.usage-card-expiry-row label { display: flex; flex: 1; min-width: 0; flex-direction: column; gap: 8px; }
+.usage-card-expiry-row input { width: 100%; min-width: 0; padding: 9px 10px; border: 1px solid var(--border); border-radius: 8px; color: var(--text); background: var(--bg); font: inherit; }
+.usage-card-expiry-row > button { flex-shrink: 0; margin-bottom: 4px; }
+.usage-card-expiry-pagination { display: flex; align-items: center; justify-content: space-between; padding: 12px; border-top: 1px solid var(--border); color: var(--muted); }

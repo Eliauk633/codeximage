@@ -1,0 +1,71 @@
+.companion-picture { width: 60px; height: 60px; object-fit: contain; flex-shrink: 0; }
+.companion-emoji { display: inline-flex; align-items: center; justify-content: center; font-size: 48px; line-height: 1; }
+.companion-row.selected { background: var(--hover); border-radius: 10px; }
+.companion-row .companion-picture { width: 18px; height: 18px; font-size: 17px; }
+.companion-profile { width: 302px; flex: 0 0 302px; align-self: flex-start; margin: 8px 8px 16px 0; padding: 20px 16px; background: var(--surface); border: 1px solid var(--border); border-radius: 18px; box-shadow: 0 2px 10px #00000008; position: relative; max-height: calc(100vh - 68px); overflow: auto; }
+.companion-profile-close { position: absolute; top: 6px; right: 6px; color: var(--muted); opacity: 0; border-radius: 6px; padding: 3px; }
+.companion-profile:hover .companion-profile-close, .companion-profile-close:focus-visible { opacity: 1; }
+.companion-profile-heading { width: 100%; display: flex; gap: 16px; align-items: center; text-align: left; border-radius: 10px; }
+.companion-profile-heading > span { flex: 1; min-width: 0; }
+.companion-profile-heading strong { display: block; overflow-wrap: anywhere; font-weight: 600; }
+.companion-profile-heading small { display: block; color: var(--muted); margin-top: 8px; font-size: 13px; }
+.companion-profile-heading > svg { opacity: 0; }
+.companion-profile-heading:hover > svg, .companion-profile-heading:focus-visible > svg { opacity: 1; }
+.companion-contact { display: flex; gap: 8px; margin-top: 18px; }
+.companion-contact button { height: 36px; flex: 1; display: flex; align-items: center; justify-content: center; gap: 8px; background: var(--hover); border-radius: 10px; font-size: 13px; }
+.slack-symbol { color: #36c5f0; font-size: 23px; }
+.companion-notification { display: flex; gap: 12px; align-items: center; margin-top: 16px; font-size: 13px; }
+.companion-notification > svg { color: var(--muted); }
+.companion-notification button { margin-left: auto; background: var(--text); color: var(--surface); border-radius: 20px; padding: 6px 12px; font-size: 12px; }
+.companion-profile section { margin-top: 24px; }
+.companion-profile h3 { font-size: 14px; color: var(--muted); font-weight: 400; margin: 0 0 12px; }
+.companion-profile section p, .companion-notice { font-size: 13px; color: var(--muted); line-height: 20px; }
+.companion-device, .companion-activity { display: flex; align-items: center; gap: 12px; margin: 10px 0; }
+.companion-device svg, .companion-activity svg { flex-shrink: 0; color: var(--muted); }
+.companion-device small { display: block; margin-top: 4px; color: var(--muted); }
+.companion-activity span { white-space: nowrap; text-overflow: ellipsis; overflow: hidden; font-size: 13px; }
+.companion-edit { display: flex; flex-direction: column; gap: 16px; }
+.companion-edit > .companion-picture { align-self: center; }
+.companion-edit label { display: flex; flex-direction: column; gap: 8px; }
+.companion-avatar-options { display: flex; gap: 10px; justify-content: center; }
+.companion-avatar-options button { padding: 5px; border-radius: 8px; border: 1px solid transparent; }
+.companion-avatar-options button[aria-pressed=true] { border-color: #93b900; background: #f6fae9; }
+.companion-avatar-options .companion-picture { width: 28px; height: 28px; font-size: 25px; }
+.companion-edit-error { color: #c43d2d; font-size: 13px; }
+.main-surface.companion-surface .conversation { padding-top: 0; overflow: hidden; }
+.main-surface.companion-surface .message-scroll { flex: 1; min-height: 0; overflow: auto; }
+.companion-surface .messages { width: min(100%, 800px); padding: 20px 32px; }
+.companion-surface .message.assistant { margin: 6px 88px 6px 0; padding: 0; }
+.companion-surface .assistant > .message-content { background: #f5f5f5; border-radius: 24px; padding: 10px 16px; }
+.companion-surface .reply-heading { display: none; }
+.companion-surface .reply-actions { margin: 4px 12px; }
+.companion-surface .message.user { margin: 16px 0 24px; }
+.companion-surface .user .message-content { background: #acd600; color: #182200; border-radius: 22px; padding: 10px 16px; }
+.companion-surface .reply-content { line-height: 20px; }
+.companion-surface .composer-area { width: min(100%, 800px); padding: 6px 32px 16px; order: 1; }
+.companion-surface .composer { display: flex; align-items: center; flex-wrap: wrap; padding: 8px; margin: 0; gap: 4px; }
+.companion-surface .composer textarea { order: 2; flex: 1; min-width: 80px; width: 0; min-height: 28px; padding: 4px 0; }
+.companion-surface .composer-toolbar { display: contents; }
+.companion-surface .composer-controls { order: 1; }
+.companion-surface .composer-controls .icon-button { width: 28px; height: 28px; }
+.companion-surface .composer-send-controls { order: 3; }
+.companion-surface .attachments { order: 0; flex-basis: 100%; }
+.companion-surface .send-button { background: #acd600; color: #4c6800; }
+.companion-surface .send-button:disabled { background: #ddec9d; opacity: 1; }
+.companion-empty { margin: auto; text-align: center; padding: 32px; }
+.companion-empty h1 { font-size: 24px; margin: 18px 0 10px; }
+.companion-empty p { color: var(--muted); }
+:root[data-theme='dark'] .companion-surface .assistant > .message-content { background: var(--hover); }
+@media (max-width: 1100px) {
+ .companion-profile { position: absolute; top: 0; right: 0; z-index: 12; }
+ .companion-surface .message.assistant { margin-right: 30px; }
+}
+.companion-surface .message.assistant { width: calc(100% - 88px); }
+.companion-surface .message.assistant > .message-content { background: #f5f5f5; border-radius: 24px; padding: 10px 16px; line-height: 20px; white-space: normal; }
+.companion-surface .message.user > .message-content { color: #182200; line-height: 20px; }
+.companion-surface .message.assistant .reply-actions { opacity: 0; height: 0; overflow: hidden; margin: 0; }
+.companion-surface .message.assistant:hover .reply-actions, .companion-surface .message.assistant:focus-within .reply-actions { opacity: 1; height: 26px; margin: 2px 12px; }
+.companion-surface .message.assistant:has(.reply-retry) .reply-actions { opacity: 1; height: auto; }
+:root[data-theme='dark'] .companion-surface .message.assistant > .message-content { background: var(--hover); }
+:root[data-theme='dark'] .companion-surface .message.user > .message-content { color: #182200; }
+@media (max-width: 1100px) { .companion-surface .message.assistant { width: calc(100% - 30px); } }

@@ -1,0 +1,20 @@
+.conversation-rail { position: absolute; left: 16px; top: 50%; transform: translateY(-50%); z-index: 4; }
+.conversation-rail-list { max-height: min(70vh, 640px); overflow-y: auto; scrollbar-width: none; touch-action: none; user-select: none; }
+.conversation-rail-list::-webkit-scrollbar { display: none; }
+.conversation-rail-list { --rail-fade-top: 0px; --rail-fade-bottom: 0px; mask-image: linear-gradient(to bottom, transparent, #000 var(--rail-fade-top), #000 calc(100% - var(--rail-fade-bottom)), transparent); }
+.conversation-rail-list[data-fade-top] { --rail-fade-top: 40px; }
+.conversation-rail-list[data-fade-bottom] { --rail-fade-bottom: 40px; }
+.conversation-rail-stop { display: flex; align-items: center; width: 36px; height: 10px; padding: 0; color: #d8d8d8; }
+.conversation-rail-stop > span { display: block; width: 26px; height: 2px; background: currentColor; transform: scaleX(calc((6 + 20 * var(--rail-progress, 0)) / 26)); transform-origin: left; transition: transform 160ms cubic-bezier(.2,.8,.3,1); }
+.conversation-rail-stop[aria-current] { color: #808182; }
+.conversation-rail-stop[data-hovered], .conversation-rail-stop:focus-visible { color: var(--text); }
+.conversation-rail-preview { position: fixed; z-index: 100; width: max-content; max-width: min(320px, calc(100vw - 68px)); padding: 12px 14px; border-radius: 12px; border: 1px solid var(--border); background: var(--surface); color: var(--text); box-shadow: var(--shadow); pointer-events: none; font-size: 12px; line-height: 18px; }
+.conversation-rail-preview strong, .conversation-rail-preview p { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden; overflow-wrap: anywhere; white-space: pre-line; }
+.conversation-rail-preview strong { font-weight: 500; }
+.conversation-rail-preview p { color: var(--muted); margin-top: 8px; }
+:root[data-theme='dark'] .conversation-rail-stop { color: #4d4e50; }
+:root[data-theme='dark'] .conversation-rail-stop[aria-current] { color: #a5a6a8; }
+:root[data-theme='dark'] .conversation-rail-stop[data-hovered] { color: var(--text); }
+@container (max-width: 650px) { .conversation-rail { left: 4px; } .conversation-rail-stop { width: 24px; } }
+@container (max-width: 480px) { .conversation-rail { display: none; } }
+@media (prefers-reduced-motion: reduce) { .conversation-rail-stop > span { transition: none; } }

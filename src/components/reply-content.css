@@ -1,0 +1,55 @@
+.reply-content {
+  min-width: 0;
+  font-size: var(--ui-font-size, 14px);
+  line-height: calc(var(--ui-font-size, 14px) * 12 / 7);
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+.reply-content :where(p, ul, ol, pre, blockquote, h1, h2, h3, h4, h5, h6, hr) { margin: 0; }
+.reply-content > * + * { margin-top: 12px; }
+.reply-content > :where(ul, ol) { margin-top: 2px; }
+.reply-content > :where(ul, ol) + p { margin-top: 8px; }
+.reply-content p { white-space: pre-line; }
+.reply-content :where(ul, ol) { padding-left: 1.5em; }
+.reply-content li + li { margin-top: 2px; }
+.reply-content li > * + * { margin-top: 4px; }
+.reply-content li > :where(ul, ol) { margin-top: 2px; }
+.reply-content :where(h1, h2, h3, h4, h5, h6) { font-size: 1em; line-height: inherit; font-weight: 650; }
+.reply-content strong { font-weight: 650; }
+.reply-content code {
+  padding: 1px 4px;
+  border-radius: 4px;
+  background: var(--hover);
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+  font-size: .93em;
+}
+.reply-content pre {
+  max-width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  background: var(--sidebar);
+  overflow-x: auto;
+  white-space: pre;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+.reply-content pre code { padding: 0; border-radius: 0; background: transparent; white-space: pre; }
+.reply-content blockquote { padding-left: 12px; border-left: 2px solid var(--border); color: var(--muted); }
+.reply-content blockquote > * + * { margin-top: 12px; }
+.reply-content hr { border: 0; border-top: 1px solid var(--border); }
+.reply-content .reply-link {
+  display: inline;
+  padding: 0;
+  border-radius: 2px;
+  color: inherit;
+  line-height: inherit;
+  text-align: left;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  white-space: inherit;
+  overflow-wrap: anywhere;
+}
+.reply-content .reply-link:hover { color: var(--muted); }
+.reply-content .reply-image-placeholder { color: var(--muted); }
+.reply-content .reply-link-status { display: block; margin-top: 0; color: var(--muted); font-size: 12px; line-height: 20px; }
+.reply-content .reply-link-status:not(:empty) { margin-top: 8px; }

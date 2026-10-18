@@ -1,0 +1,9 @@
+.feature-surface { position: absolute; inset: 44px 4px 4px 52px; z-index: 10; border-radius: 13px; overflow: hidden; background: var(--surface); box-shadow: 0 0 0 .5px var(--border); }
+.feature-surface[hidden] { display: none; }
+.navigation-customize > p { color: var(--muted); font-size: 13px; line-height: 21px; margin: 0 0 18px; }
+.navigation-customize > label { display: flex; align-items: center; gap: 12px; min-height: 42px; padding: 0 10px; border-radius: 8px; font-size: 14px; }
+.navigation-customize > label:hover { background: var(--hover); }
+.navigation-customize input { accent-color: var(--accent); width: 16px; height: 16px; }
+.navigation-reset { margin: 18px 10px 0; color: var(--muted); font-size: 13px; }
+.navigation-reset:hover { color: var(--text); }
+.navigation-customize .navigation-error { color: var(--danger); margin: 12px 10px 0; }
