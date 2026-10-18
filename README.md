@@ -21,6 +21,12 @@ cp .env.example .env
 
 在本机 `.env` 填写自己的 `AGNES_API_KEY`，生成至少 32 位随机服务凭证，并将 `STUDIO_GATEWAY_TOKEN` 与 `CODEX_STUDIO_AI_TOKEN` 设为相同值。不要提交或分享填写后的文件。
 
+模板已填写本机监听地址 `127.0.0.1`、端口 `8787` 和客户端地址。两个凭证字段是必须替换的占位提示，不能直接启动。可在自己的终端运行以下命令生成一次凭证，再填入两处：
+
+```sh
+node -e "console.log(require('node:crypto').randomBytes(32).toString('hex'))"
+```
+
 分别在两个终端运行：
 
 ```sh
